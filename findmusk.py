@@ -23,8 +23,8 @@ result = cv2.matchTemplate(image,templateResiz, cv2.TM_CCOEFF_NORMED)
 
 ## determina local onde foi encontrado o padrão
 (startX,startY) = maxLoc
-endX = startX + template.shape[1]
-endY = startY + template.shape[0]
+endX = startX + templateResiz.shape[1]
+endY = startY + templateResiz.shape[0]
 
 ## desenha quadrado ao redor do padrão encontrado
 cv2.rectangle(image, (startX,startY),(endX,endY), (255,0,0),10)
